@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" dir="ltr" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Aurelian Earth | Luxury Bath & Apothecary</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="stylesheet"/>
+    <style>
+        :root { --terracotta: #A65D46; --sand: #E8D5C4; --olive: #5F634F; --cream: #FDF9F6; --charcoal: #2D2D2D; }
+        body { font-family: 'Manrope', sans-serif; background-color: var(--cream); color: var(--charcoal); transition: background-color 0.5s ease; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; font-weight: 500; letter-spacing: -0.01em; }
+        .bg-terracotta { background-color: var(--terracotta); }
+        .bg-olive { background-color: var(--olive); }
+        .bg-sand { background-color: var(--sand); }
+        .grainy-bg::before { content: ""; position: absolute; inset: 0; opacity: 0.03; z-index: 1; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+        .custom-shape { border-radius: 120px 120px 0 0; }
+        @media (min-width: 768px) { .custom-shape { border-radius: 200px 200px 0 0; } }
+        .text-shadow-sm { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        [dir="rtl"] .rtl-flip { transform: scaleX(-1); }
+    </style>
+</head>
+<body class="grainy-bg overflow-x-hidden">
+
+<nav class="fixed top-0 w-full z-[100] bg-white/80 backdrop-blur-xl border-b border-sand/30">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-12 py-4 md:py-5">
+        <a class="font-serif text-xl md:text-3xl tracking-tighter text-charcoal flex items-center gap-2 font-medium" href="#">
+            <span class="w-6 md:w-8 h-[1px] bg-terracotta"></span> Aurelian Earth
+        </a>
+        <div class="flex items-center gap-4 md:gap-8">
+            <div class="hidden sm:flex gap-6 md:gap-8 text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-medium text-charcoal/60">
+                <a class="hover:text-terracotta transition-colors" href="#products">Boutique</a>
+                <a class="hover:text-terracotta transition-colors" href="#about">Héritage</a>
+            </div>
+            <button class="uppercase font-semibold tracking-widest text-[9px] md:text-[10px] px-3 py-2 border border-sand rounded-full hover:bg-sand transition-all" id="lang-toggle">
+                <span id="lang-label">FR / AR</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section class="relative h-[100svh] flex items-center justify-center overflow-hidden">
+        <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
+        <div class="relative z-10 text-center px-6 text-white max-w-4xl">
+            <span class="inline-block mb-4 text-xs uppercase tracking-[0.4em] opacity-90">L'Art de l'Apothicaire</span>
+            <h1 class="text-5xl md:text-9xl font-serif mb-6 leading-tight">Aurelian Earth</h1>
+            <p class="text-base md:text-xl mb-10 italic font-light opacity-100">
+                Une symphonie minérale pour vos rituels de bain.<br/>
+                <span class="text-sand font-medium">سيمفونية معدنية لطقوس الاستحمام الخاصة بك.</span>
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a class="w-full sm:w-auto px-10 py-5 rounded-full bg-terracotta text-white font-bold uppercase text-[11px] tracking-widest hover:bg-white hover:text-terracotta transition shadow-2xl" href="https://wa.me/1234567890">Commander via WhatsApp</a>
+                <a class="text-[11px] uppercase tracking-widest font-bold border-b-2 border-white/50 pb-1 hover:border-white transition-all" href="#products">Découvrir</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Section -->
+    <section class="py-20 md:py-40 bg-white" id="about">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative order-2 lg:order-1">
+                <div class="aspect-[4/5] custom-shape bg-sand/20 overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com" class="w-full h-full object-cover"/>
+                </div>
+                <div class="absolute -bottom-6 -right-2 bg-olive p-8 text-white max-w-xs shadow-2xl">
+                    <h4 class="font-serif text-2xl italic mb-2">Pharmacist Crafted</h4>
+                    <p class="text-sm opacity-90">Science pharmaceutique et noblesse de la terre.</p>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 lg:pl-12">
+                <span class="text-terracotta font-bold tracking-widest text-[10px] uppercase mb-4 block">Notre Philosophie</span>
+                <h2 class="text-4xl md:text-6xl font-serif text-charcoal mb-8 leading-tight">L'excellence de l'artisanat <span class="italic text-terracotta">algérien.</span></h2>
+                <p class="text-charcoal/70 text-lg leading-loose">Nous distillons l'essence de la flore méditerranéenne pour créer des moments de reconnexion.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section (Completed) -->
+    <section class="py-24 bg-cream" id="products">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-serif text-center mb-16">La Collection</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Produit 1 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[3/4] overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+                    </div>
+                    <h3 class="text-xl font-serif">Sels de Mer d'Alboran</h3>
+                    <p class="text-terracotta font-bold text-sm uppercase tracking-widest">3500 DZD</p>
+                </div>
+                <!-- Produit 2 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[3/4] overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+                    </div>
+                    <h3 class="text-xl font-serif">Huile d'Olive Atlas</h3>
+                    <p class="text-terracotta font-bold text-sm uppercase tracking-widest">4200 DZD</p>
+                </div>
+                <!-- Produit 3 -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[3/4] overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+                    </div>
+                    <h3 class="text-xl font-serif">Baume Botanique</h3>
+                    <p class="text-terracotta font-bold text-sm uppercase tracking-widest">2800 DZD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="py-12 bg-charcoal text-sand/50 text-center text-xs uppercase tracking-widest">
+    <p>&copy; 2024 Aurelian Earth - Façonné en Algérie</p>
+</footer>
+
+<script>
+    const langBtn = document.getElementById('lang-toggle');
+    const langLabel = document.getElementById('lang-label');
+    
+    langBtn.addEventListener('click', () => {
+        const isFr = document.documentElement.lang === 'fr';
+        document.documentElement.lang = isFr ? 'ar' : 'fr';
+        document.documentElement.dir = isFr ? 'rtl' : 'ltr';
+        langLabel.innerText = isFr ? 'AR / FR' : 'FR / AR';
+    });
+</script>
+
+</body>
+</html>
