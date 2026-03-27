@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" dir="ltr" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Aurelian Earth | Luxury Bath & Apothecary</title>
+    <meta content="Découvrez Aurelian Earth, l'excellence de l'artisanat algérien." name="description"/>
+    
+    <!-- Tailwind & Fonts -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <style>        :root {
+            --terracotta: #A65D46;
+            --sand: #E8D5C4;
+            --olive: #5F634F;
+            --cream: #FDF9F6;
+            --charcoal: #2D2D2D;        }
+
+        body { 
+            font-family: 'Manrope', sans-serif; 
+            background-color: var(--cream); 
+            color: var(--charcoal);
+            overflow-x: hidden;        }
+
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .grainy-bg::before {
+            content: "";            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            z-index: 999;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .custom-shape { border-radius: 240px 240px 0 0; }
+        
+        .nav-blur {
+            background: rgba(253, 249, 246, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        [dir="rtl"] { text-align: right; }
+        [dir="rtl"] .material-symbols-outlined { transform: scaleX(-1); }
+    </style>
+</head>
+<body class="grainy-bg">
+
+<!-- Pre-Launch Banner -->
+<div class="bg-[#A65D46] text-white text-center py-2.5 text-[9px] tracking-[0.2em] uppercase font-bold sticky top-0 z-[110]">
+    Avant-Première Exclusive / <span class="font-serif italic capitalize tracking-normal text-xs ml-1">إطلاق تجريبي حصري</span>
+</div>
+
+<!-- Navbar -->
+<nav class="sticky top-[38px] w-full z-[100] nav-blur border-b border-sand/30">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-5">
+        <a class="font-serif text-2xl md:text-3xl tracking-tighter text-charcoal flex items-center gap-3" href="#">
+            <span class="w-8 h-[1px] bg-[#A65D46] hidden sm:block"></span>
+            Aurelian Earth
+        </a>
+        <div class="flex items-center gap-8">
+            <div class="hidden md:flex gap-10 text-[10px] uppercase tracking-[0.2em] font-bold text-charcoal/70">
+                <a class="hover:text-[#A65D46] transition-colors" href="#products">Collection</a>
+                <a class="hover:text-[#A65D46] transition-colors" href="#about">Héritage</a>
+            </div>
+            <button class="uppercase font-bold tracking-widest text-[10px] px-5 py-2 border border-sand rounded-full hover:bg-sand transition-all" id="lang-toggle">
+                <span id="lang-label">FR / AR</span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <img alt="Hero" class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1600857062241-98e5dba7f214?auto=format&fit=crop&q=80"/>
+        <div class="absolute inset-0 bg-black/40"></div>        <div class="relative z-10 text-center px-6 text-white max-w-4xl reveal">
+            <span class="inline-block mb-8 text-[10px] uppercase tracking-[0.4em] font-bold border border-white/40 px-6 py-3 rounded-full backdrop-blur-md">Phase d'Avant-Première</span>
+            <h1 class="text-5xl md:text-8xl font-serif mb-8 leading-tight tracking-tighter">Aurelian Earth</h1>
+            <p class="text-lg md:text-2xl mb-12 italic font-light opacity-90">
+                Une symphonie minérale pour vos rituels de bain.<br>
+                <span class="text-[#E8D5C4] font-serif block mt-4 text-xl md:text-3xl">سيمفونية معدنية لطقوس الاستحمام</span>
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a class="w-full sm:w-auto px-12 py-5 rounded-full bg-[#A65D46] text-white font-bold tracking-[0.2em] text-[11px] uppercase transition hover:scale-105 shadow-xl" href="https://wa.me/213791812962">
+                    Commander via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Section -->
+    <section class="py-24 md:py-40 bg-white" id="about">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="relative reveal">
+                    <div class="aspect-[4/5] custom-shape bg-sand/20 overflow-hidden shadow-2xl">
+                        <img alt="Artisan" class="w-full h-full object-cover grayscale-[20%]" src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80"/>                    </div>
+                    <div class="absolute -bottom-10 -right-4 md:-right-10 bg-[#5F634F] p-10 text-white max-w-sm shadow-2xl">
+                        <h4 class="font-serif text-3xl mb-4 italic">Pharmacist Crafted</h4>                        <p class="text-sm font-light leading-relaxed opacity-90">Rigueur pharmaceutique et noblesse de la terre algérienne.</p>
+                    </div>
+                </div>
+                <div class="lg:pl-16 reveal">
+                    <span class="text-[#A65D46] font-bold tracking-[0.4em] text-[10px] uppercase mb-6 block">Notre Héritage</span>                    <h2 class="text-5xl md:text-7xl font-serif text-charcoal mb-10 leading-tight">L'excellence de <br/> l'artisanat <span class="italic text-[#A65D46]">algérien.</span></h2>
+                    <p class="text-charcoal/80 leading-loose text-lg font-light mb-8">Au cœur de nos ateliers, nous distillons l'âme des paysages méditerranéens pour créer des rituels d'exception.</p>
+                    <p class="border-l-4 border-sand pl-8 italic text-xl text-charcoal/90 font-serif">"Un moment sacré de reconnexion."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section class="py-24 bg-[#FDF9F6]" id="products">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="mb-20 reveal">
+                <h2 class="text-4xl md:text-7xl font-serif text-charcoal">La Collection <span class="text-[#A65D46] italic">Avant-Première</span></h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">                <!-- Card 1 -->
+                <article class="reveal group">
+                    <div class="relative aspect-[4/5] overflow-hidden shadow-2xl mb-8">
+                        <img alt="Product" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://images.unsplash.com/photo-1608528577221-9084fb58984a?auto=format&fit=crop&q=80"/>
+                        <span class="absolute top-6 left-6 bg-[#A65D46] text-white px-4 py-2 text-[9px] uppercase tracking-widest font-bold">Série Limitée</span>
+                    </div>
+                    <div class="flex justify-between items-start border-b border-sand pb-6">                        <div>
+                            <h3 class="text-2xl font-serif">Romarin Sauvage</h3>
+                            <p class="text-charcoal/50 text-xs uppercase tracking-widest mt-2">Purification & Revitalisation</p>
+                        </div>
+                        <span class="text-xl font-medium">15,000 DZD</span>
+                    </div>
+                    <a href="https://wa.me/213791812962" class="mt-6 flex items-center justify-between group-hover:text-[#A65D46] transition-colors uppercase text-[10px] font-bold tracking-widest">
+                        Commander via WhatsApp <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </article>
+
+                <!-- Card 2 (Offset) -->
+                <article class="reveal md:mt-32 group">
+                    <div class="relative aspect-[4/5] overflow-hidden shadow-2xl mb-8">
+                        <img alt="Product" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&q=80"/>
+                        <span class="absolute top-6 left-6 bg-[#5F634F] text-white px-4 py-2 text-[9px] uppercase tracking-widest font-bold">Édition Rare</span>
+                    </div>
+                    <div class="flex justify-between items-start border-b border-sand pb-6">                        <div>
+                            <h3 class="text-2xl font-serif">Lavande de l'Atlas</h3>
+                            <p class="text-charcoal/50 text-xs uppercase tracking-widest mt-2">Sérénité & Apaisement</p>
+                        </div>
+                        <span class="text-xl font-medium">14,000 DZD</span>
+                    </div>
+                    <a href="https://wa.me/213791812962" class="mt-6 flex items-center justify-between group-hover:text-[#A65D46] transition-colors uppercase text-[10px] font-bold tracking-widest">
+                        Commander via WhatsApp <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-[#2D2D2D] text-white/80 pt-24 pb-12">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 text-center md:text-left">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
+            <div>                <h2 class="font-serif text-3xl text-white mb-6">Aurelian Earth</h2>
+                <p class="font-light leading-relaxed">Redéfinir le bien-être à travers l'alchimie minérale algérienne.</p>
+            </div>
+            <div>
+                <h5 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#A65D46] mb-8">Navigation</h5>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#products" class="hover:text-white transition-colors">Collection</a></li>
+                    <li><a href="#about" class="hover:text-white transition-colors">Notre Histoire</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#A65D46] mb-8">Contact</h5>
+                <p class="text-sm">Alger, Algérie</p>
+                <p class="text-sm mt-2">contact@aurelianearth.com</p>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-12 text-[10px] uppercase tracking-widest flex flex-col md:flex-row justify-between gap-6">
+            <p>© 2024 Aurelian Earth Apothecary.</p>
+            <div class="flex gap-8 justify-center">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-[120] hover:scale-110 transition-transform" href="https://wa.me/213791812962">
+    <svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.999-.187-.134 0-.368.055-.688.19-.303.13-.632.418-.811.533-.153.1-.37.24-.544.24-.13 0-.298-.031-.529-.188-.21-.141-.449-.34-.698-.554-.23-.198-.44-.392-.633-.568-.11-.099-.197-.188-.28-.28-.135-.149-.21-.33-.21-.512 0-.112.044-.239.131-.381.065-.101.152-.21.249-.311.033-.034.065-.069.099-.104.066-.066.132-.132.19-.199.076-.09.153-.181.225-.26.112-.124.166-.233.166-.357 0-.132-.058-.249-.189-.451-.057-.089-.147-.23-.241-.376-.102-.159-.206-.319-.287-.446-.109-.17-.174-.312-.174-.441 0-.168.082-.314.249-.47.166-.157.38-.307.64-.457.21-.12.43-.23.64-.31.112-.04.21-.06.31-.06.157 0 .314.05.474.16.158.11.313.26.473.41.395.39.757.89 1.13 1.39.07.09.14.19.21.28.15.2.24.31.33.31.08 0 .17-.11.34-.34.1-.14.22-.3.35-.48.12-.17.25-.35.39-.51.13-.15.27-.29.42-.42.15-.13.3-.24.45-.33.15-.09.3-.14.45-.14.11 0 .21.02.31.06.21.08.43.19.64.31.26.15.48.3.64.45.16.15.24.3.24.47 0 .12-.06.27-.17.44-.08.12-.18.28-.28.44-.09.14-.18.28-.24.37-.13.2-.18.31-.18.45 0 .12.05.23.16.35.07.08.15.17.22.26.05.06.12.13.19.19.03.03.06.07.09.1.09.1.18.21.24.31.08.14.13.27.13.38 0 .18-.07.36-.21.51-.08.09-.17.18-.28.28-.19.17-.4.37-.63.56-.25.21-.48.41-.69.55-.23.15-.4.18-.52.18-.17 0-.39-.14-.54-.24-.17-.11-.5-.4-.81-.53-.32-.13-.55-.19-.68-.19-.42 0-.84.1-.99.18-.41.21-.74.52-.99.78-.41.41-.83.83-1.17 1.17z"/></svg>
+</a>
+
+<script>
+    // Reveal Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('active');
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Language Toggle
+    const langBtn = document.getElementById('lang-toggle');
+    langBtn.addEventListener('click', () => {
+        const isFR = document.documentElement.lang === 'fr';
+        document.documentElement.lang = isFR ? 'ar' : 'fr';
+        document.documentElement.dir = isFR ? 'rtl' : 'ltr';
+        document.getElementById('lang-label').textContent = isFR ? 'AR / FR' : 'FR / AR';
+    });
+</script>
+
+</body>
+      </html>
