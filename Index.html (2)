@@ -1,0 +1,21 @@
+<script>
+  // Language toggle with smooth transition handling
+  const toggleBtn = document.getElementById('lang-toggle');
+  const langLabel = document.getElementById('lang-label');
+
+  toggleBtn.addEventListener('click', () => {
+    const isLTR = document.documentElement.dir === 'ltr';
+
+    if (isLTR) {
+      // Switch to Arabic (RTL)
+      document.documentElement.dir = 'rtl';
+      document.documentElement.lang = 'ar';
+      langLabel.textContent = 'AR / FR';
+    } else {
+      // Switch to French (LTR)
+      document.documentElement.dir = 'ltr';
+      document.documentElement.lang = 'fr';
+      langLabel.textContent = 'FR / AR';
+    }
+  });
+</script>
