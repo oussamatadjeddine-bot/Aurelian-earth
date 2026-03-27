@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" dir="ltr" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aurelian Earth | Luxury Bath &amp; Apothecary | Art de l'Apothicaire Algérien</title>
+<meta content="Découvrez Aurelian Earth, l'excellence de l'artisanat algérien. Des produits de bain minéraux et botaniques formulés par des experts pour vos rituels de bien-être." name="description"/>
+<link href="https://lh3.googleusercontent.com/aida-public/AB6AXuC5W7CRPIx4fbXC5o0dIoa2Smkia2vh1FvIJCugxuK5eLCBO69gIt-F_r_S8M6Qw64WrvkI2FGV6LipzrknP9V_9C2FTlo3pDJ7RtSVNXujj1jQUheVDqcjcPk8tfj6hnA7GwpQHdJY-t6ldPelrvySDyvna0uZurlS0uAfQtaYwkUFKEa4I-xelFwbhTeeXU8Ffqv83TNXwkmGQRX0PjJfiRsI-_RxvAj8g2GmaODQIsSuAjtd1Ru1Pc8KvM-ZOURWZAFsFyVGda0" rel="icon" type="image/png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200;300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --terracotta: #A65D46;
+      --sand: #E8D5C4;
+      --olive: #5F634F;
+      --cream: #FDF9F6;
+      --charcoal: #2D2D2D;
+    }
+    body { 
+      font-family: 'Manrope', sans-serif; 
+      background-color: var(--cream); 
+      color: var(--charcoal);
+      transition: background-color 0.5s ease;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+    .gold { color: #C5A059; }
+    .bg-terracotta { background-color: var(--terracotta); }
+    .bg-olive { background-color: var(--olive); }
+    .bg-sand { background-color: var(--sand); }
+    
+    .grainy-bg {
+      position: relative;
+    }
+    .grainy-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.04;
+      z-index: 1;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    .product-card {
+      transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .product-card:hover {
+      transform: translateY(-12px);
+    }
+
+    [dir="rtl"] .rtl-flip {
+      transform: scaleX(-1);
+    }
+    html { transition: direction 0.3s ease; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .prelaunch-banner {
+      background: linear-gradient(to right, #A65D46, #8e4f3c);
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 110;
+      width: 100%;
+    }
+
+    .custom-shape {
+      border-radius: 240px 240px 0 0;
+    }
+
+    .nav-blur {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="grainy-bg">
+<!-- Pre-Launch Banner -->
+<div class="prelaunch-banner">
+    Avant-Première Exclusive / <span class="font-serif italic capitalize tracking-normal text-xs ml-1">إطلاق تجريبي حصري</span>
+</div>
+<!-- Navbar -->
+<nav class="sticky top-0 w-full z-[100] nav-blur border-b border-sand/20">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12 py-4">
+<a class="font-serif text-2xl md:text-3xl tracking-tighter text-charcoal flex items-center gap-2" href="#">
+<span class="w-6 h-[1px] bg-terracotta hidden sm:block"></span>
+        Aurelian Earth
+      </a>
+<div class="flex items-center gap-6 md:gap-10">
+<div class="hidden md:flex gap-10 text-[11px] uppercase tracking-[0.2em] font-semibold text-charcoal/70">
+<a class="hover:text-terracotta transition-colors" href="#products">Collection</a>
+<a class="hover:text-terracotta transition-colors" href="#about">Héritage</a>
+</div>
+<button class="uppercase font-bold tracking-[0.15em] text-[10px] px-4 py-2 border border-sand rounded-full hover:bg-sand transition-all duration-300" id="lang-toggle">
+<span id="lang-label">FR / AR</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+<img alt="Atmospheric visual of mineral bath components" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5W7CRPIx4fbXC5o0dIoa2Smkia2vh1FvIJCugxuK5eLCBO69gIt-F_r_S8M6Qw64WrvkI2FGV6LipzrknP9V_9C2FTlo3pDJ7RtSVNXujj1jQUheVDqcjcPk8tfj6hnA7GwpQHdJY-t6ldPelrvySDyvna0uZurlS0uAfQtaYwkUFKEa4I-xelFwbhTeeXU8Ffqv83TNXwkmGQRX0PjJfiRsI-_RxvAj8g2GmaODQIsSuAjtd1Ru1Pc8KvM-ZOURWZAFsFyVGda0"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60"></div>
+<div class="relative z-10 text-center px-6 text-white max-w-4xl reveal">
+<span class="inline-block mb-6 text-[10px] md:text-xs uppercase tracking-[0.4em] font-medium border border-white/30 px-5 py-2.5 rounded-full backdrop-blur-md">Phase d'Avant-Première</span>
+<h1 class="text-5xl md:text-8xl lg:text-9xl font-serif mb-8 leading-[1] tracking-tighter">Aurelian Earth</h1>
+<p class="text-lg md:text-2xl mb-8 italic font-light max-w-2xl mx-auto opacity-95 leading-relaxed">
+          Une symphonie minérale pour vos rituels de bain. <br class="hidden md:block"/>
+<span class="text-sand font-serif block mt-3 md:mt-2 text-xl md:text-3xl">سيمفونية معدنية لطقوس الاستحمام الخاصة بك</span>
+</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
+<a class="w-full sm:w-auto px-10 py-5 rounded-full bg-terracotta text-white font-bold tracking-[0.2em] text-[11px] uppercase transition hover:bg-white hover:text-terracotta shadow-2xl" href="https://wa.me/213791812962?text=Bonjour%2C+je+souhaite+commander+de+la+collection+en+avant-premi%C3%A8re+d%27Aurelian+Earth.">
+            Commander via WhatsApp
+          </a>
+<a class="text-[11px] uppercase tracking-[0.2em] font-bold border-b-2 border-white/40 pb-1 hover:border-white transition-all" href="#products">Découvrir la collection</a>
+</div>
+</div>
+</section>
+<!-- Heritage / Philosophy Section -->
+<section class="py-24 md:py-48 bg-white" id="about">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+<div class="relative reveal">
+<div class="aspect-[4/5] custom-shape bg-sand/20 overflow-hidden shadow-2xl">
+<img alt="Artisan hand-crafting pharmaceutical grade bath products" class="w-full h-full object-cover grayscale-[20%] hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpPreufmZ_d2SOiQ8SOXYSpjzI2KTQIY7Oinffijmf6S_zIiGXWbPmxnocQgr0QNMKgx6cljXP6CiVMQnloNTppMIV0ObWywvMBLgwB_99aFLG00H6b1wRYKnsRyh-E1bCj3mDiT51pB1RArYRDiQ_Z1Un6pKelvx2DAHUgvkCtLxqlm_BhR8GbvvWDI3muGlPLXMN70oT8qeyWG5fxA6gvt_kF7udO5Lc23LtxlCvKsY41sCJNeJIVg54kOwhD2BtsZdIN3ysB4I"/>
+</div>
+<div class="absolute -bottom-8 -right-4 md:-bottom-12 md:-right-12 bg-olive p-8 md:p-14 text-white max-w-[260px] md:max-w-sm shadow-2xl rounded-sm">
+<h4 class="font-serif text-2xl md:text-4xl mb-4 italic">Pharmacist Crafted</h4>
+<p class="text-sm md:text-base font-light leading-relaxed opacity-90">Chaque formule est une alliance précieuse entre la rigueur pharmaceutique et la noblesse de la terre algérienne.</p>
+</div>
+</div>
+<div class="lg:pl-16 reveal">
+<span class="text-terracotta font-bold tracking-[0.4em] text-[10px] uppercase mb-6 block">Notre Héritage</span>
+<h2 class="text-4xl md:text-7xl font-serif text-charcoal mb-10 leading-tight">L'excellence de <br/> l'artisanat <br/> <span class="italic text-terracotta">algérien.</span></h2>
+<div class="space-y-8 text-charcoal/80 leading-loose text-lg font-light">
+<p>Au cœur de nos ateliers, nous distillons l'âme des paysages méditerranéens pour créer des rituels d'exception. Nos créations marient minéraux ancestraux et botaniques rares.</p>
+<p class="border-l-4 border-sand/50 pl-8 italic text-xl text-charcoal/90 font-serif">"Nous ne vendons pas simplement des produits de bain, nous offrons un moment sacré de reconnexion."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Collections Section -->
+<section class="py-24 md:py-32 bg-cream/60" id="products">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 md:mb-32 gap-8 reveal">
+<div class="max-w-3xl">
+<h2 class="text-4xl md:text-7xl font-serif text-charcoal mb-6">La Collection <span class="text-terracotta italic block md:inline md:ml-6">Avant-Première / منتجاتنا</span></h2>
+<p class="text-sm md:text-base font-light text-charcoal/60 italic max-w-xl">Issue de nos tout premiers lots artisanaux. Une opportunité exclusive d'accéder à nos formulations avant le lancement officiel.</p>
+</div>
+<div class="h-[1px] w-24 bg-terracotta/40 hidden md:block mb-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-x-12 items-start">
+<!-- Product Card 1: Romarin Sauvage -->
+<article class="product-card group reveal md:col-span-7 lg:col-span-6">
+<div class="relative aspect-[4/5] overflow-hidden bg-white mb-8 shadow-xl">
+<img alt="Artisanal bath bomb with rosemary and wild botanical extracts" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpPreufmZ_d2SOiQ8SOXYSpjzI2KTQIY7Oinffijmf6S_zIiGXWbPmxnocQgr0QNMKgx6cljXP6CiVMQnloNTppMIV0ObWywvMBLgwB_99aFLG00H6b1wRYKnsRyh-E1bCj3mDiT51pB1RArYRDiQ_Z1Un6pKelvx2DAHUgvkCtLxqlm_BhR8GbvvWDI3muGlPLXMN70oT8qeyWG5fxA6gvt_kF7udO5Lc23LtxlCvKsY41sCJNeJIVg54kOwhD2BtsZdIN3ysB4I"/>
+<div class="absolute top-5 left-5 flex flex-col gap-2">
+<span class="bg-terracotta text-white px-4 py-2 rounded-full text-[9px] uppercase tracking-[0.2em] font-bold shadow-lg">Série Limitée</span>
+<span class="bg-olive/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-[8px] uppercase tracking-widest font-bold self-start">إصدار محدود</span>
+</div>
+</div>
+<div class="px-2">
+<h3 class="text-2xl md:text-4xl font-serif text-charcoal mb-2">Romarin Sauvage / <span class="italic text-xl md:text-2xl text-terracotta">روزماري بري</span></h3>
+<p class="text-sm text-charcoal/60 font-light mb-8 tracking-wide">Purification profonde &amp; revitalisation / ينقي ويجدد البشرة</p>
+<div class="flex justify-between items-center border-t border-sand pt-6">
+<span class="text-2xl font-medium text-charcoal tracking-tighter">15,000 DZD</span>
+<a class="text-[11px] uppercase tracking-[0.2em] font-bold text-terracotta hover:text-charcoal transition-colors flex items-center gap-2" href="https://wa.me/213791812962?text=Bonjour%2C+je+souhaite+commander+de+la+collection+en+avant-premi%C3%A8re+d%27Aurelian+Earth.">
+                  Commander <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Product Card 2: Lavande de l'Atlas -->
+<article class="product-card group reveal md:col-span-5 lg:col-span-5 md:mt-40 lg:ml-12">
+<div class="relative aspect-[3/4] overflow-hidden bg-white mb-8 shadow-2xl">
+<img alt="Luxury artisanal lavender bath bomb" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_nEEXc9BfbGkW4mc_NYShzkXBSvGtCWUiuLXH7Xg-no-51HfJTfLDVnokfwEqZJjPwiw7h4zAVEY_MfrtRnLqtjiS90HOHgz3BKgspXrNGrU1L2UgOiAzdhXlgf7R63Bvxakv1HzcMcD-Bf0kTAwz4ZGulc8p4BluTRBzWNCqiMCPKW9veJuoLCQdBlkvoXxoQ1n4dtcCZLrcmtCHqYLL5VIyaCWuvjDmvuTkOPVyOrHG9mTz6X5YXczvlkswaI9329RAMjnAdDc"/>
+<div class="absolute top-5 left-5 flex flex-col gap-2">
+<span class="bg-terracotta text-white px-4 py-2 rounded-full text-[9px] uppercase tracking-[0.2em] font-bold shadow-lg">Série Limitée</span>
+<span class="bg-olive/90 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-[8px] uppercase tracking-widest font-bold self-start">إصدار محدود</span>
+</div>
+</div>
+<div class="px-2">
+<h3 class="text-2xl md:text-3xl font-serif text-charcoal mb-2">Lavande de l'Atlas / <span class="italic text-lg md:text-xl text-terracotta">لافندر الأطلس</span></h3>
+<p class="text-sm text-charcoal/60 font-light mb-8 tracking-wide">Sérénité &amp; apaisement profond / صفاء وتهدئة عميقة</p>
+<div class="flex justify-between items-center border-t border-sand pt-6">
+<span class="text-2xl font-medium text-charcoal tracking-tighter">14,000 DZD</span>
+<a class="text-[11px] uppercase tracking-[0.2em] font-bold text-terracotta hover:text-charcoal transition-colors flex items-center gap-2" href="https://wa.me/213791812962?text=Bonjour%2C+je+souhaite+commander+de+la+collection+en+avant-premi%C3%A8re+d%27Aurelian+Earth.">
+                  Commander <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 md:py-40 bg-white">
+<div class="max-w-4xl mx-auto px-6 text-center reveal">
+<span class="material-symbols-outlined text-4xl text-sand mb-8">format_quote</span>
+<h2 class="text-2xl md:text-4xl font-serif italic text-charcoal leading-relaxed mb-12">
+          "Une expérience sensorielle sans précédent. On sent immédiatement la qualité pharmaceutique et la pureté des ingrédients. C'est le luxe à l'état pur."
+        </h2>
+<div class="flex flex-col items-center">
+<div class="w-12 h-[1px] bg-terracotta mb-4"></div>
+<p class="text-[10px] uppercase tracking-[0.3em] font-bold text-charcoal">Sofia B. — Algérie</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#2D2D2D] text-white pt-24 pb-12 relative z-50">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+<!-- Brand Column -->
+<div class="lg:col-span-2">
+<a class="font-serif text-3xl md:text-4xl tracking-tighter block mb-8 text-white" href="#">Aurelian Earth</a>
+<p class="text-white/60 font-light max-w-sm leading-relaxed mb-8">Redéfinir le bien-être à travers l'alchimie minérale algérienne. Des produits conçus avec rigueur et passion pour vos rituels quotidiens.</p>
+<div class="flex gap-6">
+<a aria-label="Facebook" class="text-white/40 hover:text-[#E8D5C4] transition-colors" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+</a>
+<a aria-label="Instagram" class="text-white/40 hover:text-[#E8D5C4] transition-colors" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+<a aria-label="TikTok" class="text-white/40 hover:text-[#E8D5C4] transition-colors" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.81.3-.85.53-1.46 1.43-1.63 2.41-.21 1.04.1 2.13.78 2.91.64.73 1.57 1.13 2.53 1.17 1.16.1 2.3-.43 3.01-1.32.48-.59.75-1.35.78-2.12.05-4.43.02-8.86.03-13.29z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Navigation Column -->
+<div>
+<h5 class="text-[10px] uppercase tracking-[0.3em] font-bold text-terracotta mb-8">Navigation</h5>
+<ul class="space-y-4 text-sm font-light text-white/60">
+<li><a class="hover:text-white transition-colors" href="#products">Boutique Avant-Première</a></li>
+<li><a class="hover:text-white transition-colors" href="#about">Notre Histoire</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Engagement Qualité</a></li>
+<li><a class="hover:text-white transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<!-- Contact Column -->
+<div>
+<h5 class="text-[10px] uppercase tracking-[0.3em] font-bold text-terracotta mb-8">Contact &amp; Aide</h5>
+<ul class="space-y-4 text-sm font-light text-white/60">
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="https://wa.me/213791812962"><span class="material-symbols-outlined text-sm">chat_bubble</span> WhatsApp</a></li>
+<li><a class="hover:text-white transition-colors flex items-center gap-2" href="mailto:contact@aurelianearth.com"><span class="material-symbols-outlined text-sm">mail</span> contact@aurelianearth.com</a></li>
+<li><p class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Alger, Algérie</p></li>
+</ul>
+</div>
+</div>
+<!-- Legal Bottom -->
+<div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[10px] uppercase tracking-widest text-white/30">© 2024 Aurelian Earth Apothecary. Tous droits réservés.</p>
+<div class="flex gap-8 text-[10px] uppercase tracking-widest text-white/30">
+<a class="hover:text-white transition-colors" href="#">Mentions Légales</a>
+<a class="hover:text-white transition-colors" href="#">Politique de Confidentialité</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp-float" href="https://wa.me/213791812962?text=Bonjour%2C+je+souhaite+commander+de+la+collection+en+avant-premi%C3%A8re+d%27Aurelian+Earth.">
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.503-2.961-2.617-.
